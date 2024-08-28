@@ -22,7 +22,7 @@ export const createDocument = async ({
       [email]: ["room:write"],
     };
 
-    const room = await liveblocks.createRoom("roomId", {
+    const room = await liveblocks.createRoom(roomId, {
       metadata,
       usersAccesses,
       defaultAccesses: [],
@@ -32,6 +32,6 @@ export const createDocument = async ({
 
     return parseStringify(room);
   } catch (error) {
-    console.log(`ÏError happened while creating a room: ${error}`);
+    console.log(`Error happened while creating a room: ${error}`);
   }
 };
